@@ -49,8 +49,14 @@ notifications:
   email:
     recipients:
     - ppwwyyxxc@gmail.com
-    on_success: never
-    on_failure: change
+    on_success: always
+    on_failure: always
+  webhooks:
+    urls:
+      - https://webhooks.gitter.im/e/cede9dbbf6630b3704b3
+    on_success: always # options: [always|never|change] default: always
+    on_failure: always  # options: [always|never|change] default: always
+    on_start: never     # options: [always|never|change] default: always
 
 deploy:
 - provider: pypi
